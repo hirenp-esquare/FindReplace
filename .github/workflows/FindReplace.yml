@@ -69,14 +69,14 @@ jobs:
     - name: Modified Files
       run: echo ${{ steps.fn.outputs.modifiedFiles }}
           
-    #- name: Check outputs and modified files
-      #if: ${{ steps.fn.outputs.modifiedFiles > 0 }} 
-      #run: |
-        #git config user.name github-actions
-        #git config user.email github-actions@github.com
-        #git add .
-        #git commit -m "Find and Replace Commit"
-        #git push   
+    - name: Check outputs and modified files
+      if: ${{ steps.fn.outputs.modifiedFiles > 0 }} 
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add .
+        git commit -m "Find and Replace Commit"
+        git push   
              
            
         
