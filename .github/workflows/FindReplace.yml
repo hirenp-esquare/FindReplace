@@ -49,10 +49,11 @@ jobs:
         
     - name: Find and Replace
       id: fn
-      uses: shitiomatic/str-replace@master
+      uses: jacobtomlinson/gha-find-replace@v2
       with:
-        find: "have"
-        replace: "hello"
+          find: "hello"
+          replace: "world"
+          regex: false
         
         # search returns only committed file by user 
         #include: ${{ steps.getfile.outputs.files }} 
