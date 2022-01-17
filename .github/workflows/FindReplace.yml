@@ -54,6 +54,7 @@ jobs:
           find: "hello"
           replace: "world"
           regex: false
+          exclude: "**/*.yml"
         
         # search returns only committed file by user 
         #include: ${{ steps.getfile.outputs.files }} 
