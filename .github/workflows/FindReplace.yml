@@ -66,8 +66,8 @@ jobs:
         
         
    
-    #- name: Modified Files
-      #run: echo ${{ steps.fn.outputs.modifiedFiles }}
+    - name: Modified Files
+      run: echo ${{ steps.fn.outputs.modifiedFiles }}
           
     #- name: Check outputs and modified files
       #if: ${{ steps.fn.outputs.modifiedFiles > 0 }} 
