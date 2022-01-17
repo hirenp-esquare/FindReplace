@@ -55,15 +55,12 @@ jobs:
           replace: "world"
           regex: false
           exclude: "**/*.yml"
-        
-        # search returns only committed file by user 
-        #include: ${{ steps.getfile.outputs.files }} 
-        
-        # only searching such directory's files and subdirectory's files which is committed by the user
-        #include: ${{ steps.getDirName.outputs.dirs }} 
-       
-        # always searching directory or file by its name which is available with double quotes i.e "test", "test/xyx.txt", "xyx.txt"
-        #include: ""
+          # search returns only committed file by user 
+          include: ${{ steps.getfile.outputs.files }} 
+          # only searching such directory's files and subdirectory's files which is committed by the user
+          #include: ${{ steps.getDirName.outputs.dirs }} 
+          # always searching directory or file by its name which is available with double quotes i.e "test", "test/xyx.txt", "xyx.txt"
+          #include: ""
         
         
    
